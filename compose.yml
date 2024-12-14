@@ -1,0 +1,15 @@
+
+services:
+  reverse-proxy:
+    image: nginx:latest
+    container_name: "dimar_proxy"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf  # Asegúrate de que esta ruta sea correcta
+    ports:
+      - "8080:80"  # Mapea el puerto 80 para escuchar las solicitudes HTTP
+    networks:
+      - dimar_network1  # Utiliza la misma red que el proyecto Docker4Drupal (puede necesitar ajustarse)
+
+networks:
+  dimar_network:
+    external: true  # Usa una red externa que esté compartida entre ambos archivos docker-compose
