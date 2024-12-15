@@ -6,7 +6,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf
       - ../portal_maritimo_colombiano:/var/www/html:cached
     networks:
       - dimar_network
