@@ -3,7 +3,7 @@ services:
     image: nginx:latest
     container_name: dimar_nginx
     depends_on:
-      - drupal
+      - pmc_drupal
     restart: always
     ports:
       - "80:80"  # El puerto que se expone
