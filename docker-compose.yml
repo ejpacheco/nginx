@@ -2,8 +2,6 @@ services:
   nginx:
     image: nginx:latest
     container_name: dimar_nginx
-    depends_on:
-      - drupal
     restart: always
     ports:
       - "80:80"  # El puerto que se expone
@@ -12,8 +10,6 @@ services:
       - ../portal_maritimo_colombiano:/var/www/html:ro  # Monta el directorio del sitio Drupal
     networks:
       - dimar_network
-    external_links:
-      - pmc_drupal:drupal
 
 networks:
   dimar_network:
