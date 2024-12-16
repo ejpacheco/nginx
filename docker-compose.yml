@@ -9,9 +9,3 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
       # - ../portal_maritimo_colombiano:/var/www/html:cached
       # - ../portal_ninos_dimar:/var/www/infantil:cached
-    networks:
-      - dimar_network
-
-networks:
-  dimar_network:
-    external: true
